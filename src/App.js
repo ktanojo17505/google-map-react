@@ -12,8 +12,9 @@ import Geocode from "react-geocode";
 import { Descriptions } from "antd";
 import AutoComplete from "react-google-autocomplete";
 import mapStyles from "./mapStyles";
+import * as config from "./config";
 
-Geocode.setApiKey("AIzaSyBF9A1Uk6zkj1weKZ-m_DLJkrIhIFfBoSw");
+Geocode.setApiKey(config.GOOGLE_API_KEY);
 
 class App extends React.Component {
   state = {
@@ -220,7 +221,12 @@ class App extends React.Component {
           </Descriptions.Item>
         </Descriptions>
         <MapWithAMarker
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBF9A1Uk6zkj1weKZ-m_DLJkrIhIFfBoSw&v=3.exp&libraries=geometry,drawing,places"
+          googleMapURL={
+            "https://maps.googleapis.com/maps/api/js?key=" +
+            config.GOOGLE_API_KEY +
+            "&v=3.exp&libraries=geometry,drawing,places"
+          }
+          // googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBF9A1Uk6zkj1weKZ-m_DLJkrIhIFfBoSw&v=3.exp&libraries=geometry,drawing,places"
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={<div style={{ height: `400px` }} />}
           mapElement={<div style={{ height: `100%` }} />}
