@@ -31,7 +31,8 @@ class App extends React.Component {
     markerPosition: {
       lat: 0,
       lng: 0
-    }
+    },
+    markers: []
   };
 
   componentDidMount() {
@@ -116,7 +117,10 @@ class App extends React.Component {
       }
     }
   };
+
   onMarkerDragEnd = event => {
+    // console.log(event);
+    console.log(this.state.markerPosition);
     let newLat = event.latLng.lat();
     let newLng = event.latLng.lng();
     Geocode.fromLatLng(newLat, newLng).then(response => {
@@ -166,6 +170,31 @@ class App extends React.Component {
       }
     });
   };
+
+  placeMarker = event => {
+    // console.log(event);
+    const lat = event.latLng.lat();
+    const lng = event.latLng.lng();
+    const position = { lat, lng };
+    const newMarker = { position };
+    this.setState({
+      markers: [...this.state.markers, newMarker]
+    });
+    // console.log(this.state.markers);
+  };
+
+  onMarkersDragEnd = (coord, index) => {
+    console.log(coord);
+    // const lat = coord.lat;
+    // const lng = coord.lng;
+
+    // this.setState(prevState => {
+    //   const markers = this.state.markers;
+    //   markers[index].lat = lat;
+    //   markers[index].lng = lng;
+    // });
+  };
+
   render() {
     const options = {
       styles: mapStyles
@@ -179,6 +208,7 @@ class App extends React.Component {
             lng: this.state.mapPosition.lng
           }}
           options={options}
+          onClick={this.placeMarker}
         >
           <Marker
             draggable={true}
@@ -192,6 +222,13 @@ class App extends React.Component {
               <div>{this.state.address}</div>
             </InfoWindow>
           </Marker>
+          {this.state.markers.map((marker, index) => (
+            <Marker
+              draggable={true}
+              onDragEnd={(t, map, coord) => this.onMarkersDragEnd(coord, index)}
+              position={marker.position}
+            />
+          ))}
           <AutoComplete
             style={{
               width: "100%",
