@@ -13,6 +13,9 @@ import { Descriptions } from "antd";
 import AutoComplete from "react-google-autocomplete";
 import mapStyles from "./mapStyles";
 import * as config from "./config";
+import * as publicHospitalData from "./data/rumahsakitumum.json";
+import * as privateHospitalData from "./data/rumahsakitkhusus.json";
+import * as publicHealthCenterData from "./data/puskesmas.json";
 
 Geocode.setApiKey(config.GOOGLE_API_KEY);
 
@@ -119,8 +122,7 @@ class App extends React.Component {
   };
 
   onMarkerDragEnd = event => {
-    // console.log(event);
-    console.log(this.state.markerPosition);
+    console.log(event);
     let newLat = event.latLng.lat();
     let newLng = event.latLng.lng();
     Geocode.fromLatLng(newLat, newLng).then(response => {
@@ -183,18 +185,6 @@ class App extends React.Component {
     // console.log(this.state.markers);
   };
 
-  onMarkersDragEnd = (coord, index) => {
-    console.log(coord);
-    // const lat = coord.lat;
-    // const lng = coord.lng;
-
-    // this.setState(prevState => {
-    //   const markers = this.state.markers;
-    //   markers[index].lat = lat;
-    //   markers[index].lng = lng;
-    // });
-  };
-
   render() {
     const options = {
       styles: mapStyles
@@ -222,11 +212,31 @@ class App extends React.Component {
               <div>{this.state.address}</div>
             </InfoWindow>
           </Marker>
-          {this.state.markers.map((marker, index) => (
+          {privateHospitalData.features.map(privateHospital => (
             <Marker
-              draggable={true}
-              onDragEnd={(t, map, coord) => this.onMarkersDragEnd(coord, index)}
-              position={marker.position}
+              draggable={false}
+              position={{
+                lat: privateHospital.properties.location.latitude,
+                lng: privateHospital.properties.location.longitude
+              }}
+            />
+          ))}
+          {publicHospitalData.features.map(publicHospital => (
+            <Marker
+              draggable={false}
+              position={{
+                lat: publicHospital.properties.location.latitude,
+                lng: publicHospital.properties.location.longitude
+              }}
+            />
+          ))}
+          {publicHealthCenterData.features.map(publicHealthCenter => (
+            <Marker
+              draggable={false}
+              position={{
+                lat: publicHealthCenter.properties.location.latitude,
+                lng: publicHealthCenter.properties.location.longitude
+              }}
             />
           ))}
           <AutoComplete
@@ -263,7 +273,6 @@ class App extends React.Component {
             config.GOOGLE_API_KEY +
             "&v=3.exp&libraries=geometry,drawing,places"
           }
-          // googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBF9A1Uk6zkj1weKZ-m_DLJkrIhIFfBoSw&v=3.exp&libraries=geometry,drawing,places"
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={<div style={{ height: `400px` }} />}
           mapElement={<div style={{ height: `100%` }} />}
