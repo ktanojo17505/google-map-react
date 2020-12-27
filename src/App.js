@@ -9,9 +9,10 @@ import {
   Marker
 } from "react-google-maps";
 import Geocode from "react-geocode";
-import { Descriptions } from "antd";
+import { Button, Descriptions } from "antd";
 import AutoComplete from "react-google-autocomplete";
 import mapStyles from "./mapStyles";
+// import Button from "react-bootstrap/Button";
 import * as config from "./config";
 import * as publicHospitalData from "./data/rumahsakitumum.json";
 import * as privateHospitalData from "./data/rumahsakitkhusus.json";
@@ -20,12 +21,53 @@ import * as publicHealthCenterData from "./data/puskesmas.json";
 Geocode.setApiKey(config.GOOGLE_API_KEY);
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    var publicHospitalLocations = [];
+    var privateHospitalLocations = [];
+    var publicHealthCenterLocations = [];
+    var position;
+    for (let index = 0; index < publicHospitalData.features.length; ++index) {
+      var latititude =
+        publicHospitalData.features[index].properties.location.latitude;
+      var longitude =
+        publicHospitalData.features[index].properties.location.longitude;
+      position = { latititude, longitude };
+      publicHospitalLocations.push(position);
+    }
+    for (let index = 0; index < privateHospitalData.features.length; ++index) {
+      var latititude =
+        privateHospitalData.features[index].properties.location.latitude;
+      var longitude =
+        privateHospitalData.features[index].properties.location.longitude;
+      position = { latititude, longitude };
+      privateHospitalLocations.push(position);
+    }
+    for (
+      let index = 0;
+      index < publicHealthCenterData.features.length;
+      ++index
+    ) {
+      var latititude =
+        publicHealthCenterData.features[index].properties.location.latitude;
+      var longitude =
+        publicHealthCenterData.features[index].properties.location.longitude;
+      position = { latititude, longitude };
+      publicHealthCenterLocations.push(position);
+    }
+    this.state.publicHospitals = publicHospitalLocations;
+    this.state.privateHospitals = privateHospitalLocations;
+    this.state.publicHealthCenters = publicHealthCenterLocations;
+    // console.log(this.state.publicHospitals);
+    // console.log(this.state.privateHospitals);
+    // console.log(this.state.publicHealthCenters);
+  }
   state = {
     address: "",
     city: "",
     area: "",
     state: "",
-    zoom: 15,
+    zoom: 11,
     height: 400,
     mapPosition: {
       lat: 0,
@@ -35,7 +77,10 @@ class App extends React.Component {
       lat: 0,
       lng: 0
     },
-    markers: []
+    placeLocations: [false, false, false], // publicHos, privateHos, publicHealth
+    publicHospitals: [],
+    privateHospitals: [],
+    publicHealthCenters: []
   };
 
   componentDidMount() {
@@ -185,72 +230,89 @@ class App extends React.Component {
     // console.log(this.state.markers);
   };
 
+  placeLocations = index => () => {
+    var newLocations = this.state.placeLocations;
+    newLocations[index] = !newLocations[index];
+    this.setState({ placeLocations: newLocations });
+    console.log(this.state.placeLocations);
+  };
+
   render() {
     const options = {
       styles: mapStyles
     };
     const MapWithAMarker = withScriptjs(
       withGoogleMap(props => (
-        <GoogleMap
-          defaultZoom={8}
-          defaultCenter={{
-            lat: this.state.mapPosition.lat,
-            lng: this.state.mapPosition.lng
-          }}
-          options={options}
-          onClick={this.placeMarker}
-        >
-          <Marker
-            draggable={true}
-            onDragEnd={this.onMarkerDragEnd}
-            position={{
-              lat: this.state.markerPosition.lat,
-              lng: this.state.markerPosition.lng
+        <div>
+          {/* <Button onClick={this.placeLocations(0)}>Public Hospitals</Button>
+          <Button onClick={this.placeLocations(1)}>Private Hospitals</Button>
+          <Button onClick={this.placeLocations(2)}>
+            Public Health Centers
+          </Button> */}
+          <GoogleMap
+            defaultZoom={this.state.zoom}
+            defaultCenter={{
+              lat: this.state.mapPosition.lat,
+              lng: this.state.mapPosition.lng
             }}
+            options={options}
+            onClick={this.placeMarker}
           >
-            <InfoWindow>
-              <div>{this.state.address}</div>
-            </InfoWindow>
-          </Marker>
-          {privateHospitalData.features.map(privateHospital => (
             <Marker
-              draggable={false}
+              draggable={true}
+              onDragEnd={this.onMarkerDragEnd}
               position={{
-                lat: privateHospital.properties.location.latitude,
-                lng: privateHospital.properties.location.longitude
+                lat: this.state.markerPosition.lat,
+                lng: this.state.markerPosition.lng
               }}
-            />
-          ))}
-          {publicHospitalData.features.map(publicHospital => (
-            <Marker
-              draggable={false}
-              position={{
-                lat: publicHospital.properties.location.latitude,
-                lng: publicHospital.properties.location.longitude
+            >
+              <InfoWindow>
+                <div>{this.state.address}</div>
+              </InfoWindow>
+            </Marker>
+            {this.state.placeLocations[0] &&
+              publicHospitalData.features.map(publicHospital => (
+                <Marker
+                  draggable={false}
+                  position={{
+                    lat: publicHospital.properties.location.latitude,
+                    lng: publicHospital.properties.location.longitude
+                  }}
+                />
+              ))}
+            {this.state.placeLocations[1] &&
+              privateHospitalData.features.map(privateHospital => (
+                <Marker
+                  draggable={false}
+                  position={{
+                    lat: privateHospital.properties.location.latitude,
+                    lng: privateHospital.properties.location.longitude
+                  }}
+                />
+              ))}
+            {this.state.placeLocations[2] &&
+              publicHealthCenterData.features.map(publicHealthCenter => (
+                <Marker
+                  draggable={false}
+                  position={{
+                    lat: publicHealthCenter.properties.location.latitude,
+                    lng: publicHealthCenter.properties.location.longitude
+                  }}
+                />
+              ))}
+            <AutoComplete
+              style={{
+                width: "100%",
+                height: "40px",
+                paddingLeft: 16,
+                marginTop: 2,
+                marginBottom: "2rem"
               }}
+              types={["(regions)"]}
+              onPlaceSelected={this.onPlaceSelected}
             />
-          ))}
-          {publicHealthCenterData.features.map(publicHealthCenter => (
-            <Marker
-              draggable={false}
-              position={{
-                lat: publicHealthCenter.properties.location.latitude,
-                lng: publicHealthCenter.properties.location.longitude
-              }}
-            />
-          ))}
-          <AutoComplete
-            style={{
-              width: "100%",
-              height: "40px",
-              paddingLeft: 16,
-              marginTop: 2,
-              marginBottom: "2rem"
-            }}
-            types={["(regions)"]}
-            onPlaceSelected={this.onPlaceSelected}
-          />
-        </GoogleMap>
+          </GoogleMap>
+        </div>
       ))
     );
 
@@ -277,6 +339,13 @@ class App extends React.Component {
           containerElement={<div style={{ height: `400px` }} />}
           mapElement={<div style={{ height: `100%` }} />}
         />
+        <div style={{ marginTop: "2.5rem" }}>
+          <Button onClick={this.placeLocations(0)}>Public Hospitals</Button>
+          <Button onClick={this.placeLocations(1)}>Private Hospitals</Button>
+          <Button onClick={this.placeLocations(2)}>
+            Public Health Centers
+          </Button>
+        </div>
       </div>
     );
   }
