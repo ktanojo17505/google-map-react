@@ -14,53 +14,25 @@ import AutoComplete from "react-google-autocomplete";
 import mapStyles from "./mapStyles";
 // import Button from "react-bootstrap/Button";
 import * as config from "./config";
-import * as publicHospitalData from "./data/rumahsakitumum.json";
-import * as privateHospitalData from "./data/rumahsakitkhusus.json";
-import * as publicHealthCenterData from "./data/puskesmas.json";
+import * as HospitalData from "./data/all.json";
+// import * as publicHospitalData from "./data/rumahsakitumum.json";
+// import * as privateHospitalData from "./data/rumahsakitkhusus.json";
+// import * as publicHealthCenterData from "./data/puskesmas.json";
 
 Geocode.setApiKey(config.GOOGLE_API_KEY);
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    var publicHospitalLocations = [];
-    var privateHospitalLocations = [];
-    var publicHealthCenterLocations = [];
+    var HospitalLocations = [];
     var position;
-    for (let index = 0; index < publicHospitalData.features.length; ++index) {
-      var latititude =
-        publicHospitalData.features[index].properties.location.latitude;
-      var longitude =
-        publicHospitalData.features[index].properties.location.longitude;
-      position = { latititude, longitude };
-      publicHospitalLocations.push(position);
+    for (let index = 0; index < HospitalData.hospitals.length; ++index) {
+      var latitude = HospitalData.hospitals[index].latitude;
+      var longitude = HospitalData.hospitals[index].longitude;
+      position = { latitude, longitude };
+      HospitalLocations.push(position);
     }
-    for (let index = 0; index < privateHospitalData.features.length; ++index) {
-      var latititude =
-        privateHospitalData.features[index].properties.location.latitude;
-      var longitude =
-        privateHospitalData.features[index].properties.location.longitude;
-      position = { latititude, longitude };
-      privateHospitalLocations.push(position);
-    }
-    for (
-      let index = 0;
-      index < publicHealthCenterData.features.length;
-      ++index
-    ) {
-      var latititude =
-        publicHealthCenterData.features[index].properties.location.latitude;
-      var longitude =
-        publicHealthCenterData.features[index].properties.location.longitude;
-      position = { latititude, longitude };
-      publicHealthCenterLocations.push(position);
-    }
-    this.state.publicHospitals = publicHospitalLocations;
-    this.state.privateHospitals = privateHospitalLocations;
-    this.state.publicHealthCenters = publicHealthCenterLocations;
-    // console.log(this.state.publicHospitals);
-    // console.log(this.state.privateHospitals);
-    // console.log(this.state.publicHealthCenters);
+    this.state.Hospitals = HospitalLocations;
   }
   state = {
     address: "",
@@ -77,10 +49,8 @@ class App extends React.Component {
       lat: 0,
       lng: 0
     },
-    placeLocations: [false, false, false], // publicHos, privateHos, publicHealth
-    publicHospitals: [],
-    privateHospitals: [],
-    publicHealthCenters: []
+    placeHospitals: false,
+    Hospitals: []
   };
 
   componentDidMount() {
@@ -218,22 +188,22 @@ class App extends React.Component {
     });
   };
 
-  placeMarker = event => {
-    // console.log(event);
-    const lat = event.latLng.lat();
-    const lng = event.latLng.lng();
-    const position = { lat, lng };
-    const newMarker = { position };
-    this.setState({
-      markers: [...this.state.markers, newMarker]
-    });
-    // console.log(this.state.markers);
-  };
+  // placeMarker = event => {
+  // console.log(event);
+  // const lat = event.latLng.lat();
+  // const lng = event.latLng.lng();
+  // const position = { lat, lng };
+  // const newMarker = { position };
+  // this.setState({
+  //   markers: [...this.state.markers, newMarker]
+  // });
+  // console.log(this.state.markers);
+  // };
 
-  placeLocations = index => () => {
-    var newLocations = this.state.placeLocations;
-    newLocations[index] = !newLocations[index];
-    this.setState({ placeLocations: newLocations });
+  placeHospitals = () => {
+    var doPlaceHospitals = this.state.placeHospitals;
+    doPlaceHospitals = !doPlaceHospitals;
+    this.setState({ placeHospitals: doPlaceHospitals });
     console.log(this.state.placeLocations);
   };
 
@@ -244,11 +214,6 @@ class App extends React.Component {
     const MapWithAMarker = withScriptjs(
       withGoogleMap(props => (
         <div>
-          {/* <Button onClick={this.placeLocations(0)}>Public Hospitals</Button>
-          <Button onClick={this.placeLocations(1)}>Private Hospitals</Button>
-          <Button onClick={this.placeLocations(2)}>
-            Public Health Centers
-          </Button> */}
           <GoogleMap
             defaultZoom={this.state.zoom}
             defaultCenter={{
@@ -270,33 +235,13 @@ class App extends React.Component {
                 <div>{this.state.address}</div>
               </InfoWindow>
             </Marker>
-            {this.state.placeLocations[0] &&
-              publicHospitalData.features.map(publicHospital => (
+            {this.state.placeHospitals &&
+              this.state.Hospitals.map(hospitalLoc => (
                 <Marker
                   draggable={false}
                   position={{
-                    lat: publicHospital.properties.location.latitude,
-                    lng: publicHospital.properties.location.longitude
-                  }}
-                />
-              ))}
-            {this.state.placeLocations[1] &&
-              privateHospitalData.features.map(privateHospital => (
-                <Marker
-                  draggable={false}
-                  position={{
-                    lat: privateHospital.properties.location.latitude,
-                    lng: privateHospital.properties.location.longitude
-                  }}
-                />
-              ))}
-            {this.state.placeLocations[2] &&
-              publicHealthCenterData.features.map(publicHealthCenter => (
-                <Marker
-                  draggable={false}
-                  position={{
-                    lat: publicHealthCenter.properties.location.latitude,
-                    lng: publicHealthCenter.properties.location.longitude
+                    lat: hospitalLoc.latitude,
+                    lng: hospitalLoc.longitude
                   }}
                 />
               ))}
@@ -340,11 +285,7 @@ class App extends React.Component {
           mapElement={<div style={{ height: `100%` }} />}
         />
         <div style={{ marginTop: "2.5rem" }}>
-          <Button onClick={this.placeLocations(0)}>Public Hospitals</Button>
-          <Button onClick={this.placeLocations(1)}>Private Hospitals</Button>
-          <Button onClick={this.placeLocations(2)}>
-            Public Health Centers
-          </Button>
+          <Button onClick={this.placeHospitals}>Hospitals</Button>
         </div>
       </div>
     );

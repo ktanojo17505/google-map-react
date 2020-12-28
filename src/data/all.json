@@ -1,0 +1,1284 @@
+{
+  "hospitals": [
+    {
+      "nama": "RSUD Dr Zainoel Abidin",
+      "kotakab": "Banda Aceh",
+      "Provinsi": "Aceh",
+      "telp": "(0651) 34562",
+      "latitude": 5.5637127,
+      "longitude": 95.3375876
+    },
+    {
+      "nama": "RSUD Cut Meutia",
+      "kotakab": "Aceh Utara",
+      "Provinsi": "Aceh",
+      "telp": "(0645) 46334",
+      "latitude": 5.1221687,
+      "longitude": 97.1541897
+    },
+    {
+      "nama": "RSUP H Adam Malik",
+      "kotakab": "Medan",
+      "Provinsi": "North Sumatera",
+      "telp": "(061) 8360051",
+      "latitude": 3.518414,
+      "longitude": 98.6064493
+    },
+    {
+      "nama": "RSUD Kota Padang Sidempuan",
+      "kotakab": "Padang Sidempuan",
+      "Provinsi": "North Sumatera",
+      "telp": "(0634) 21780",
+      "latitude": 1.3719134,
+      "longitude": 99.2694682
+    },
+    {
+      "nama": "RSUD Kabanjahe",
+      "kotakab": "Kabanjahe",
+      "Provinsi": "North Sumatera",
+      "telp": "(0628) 20012",
+      "latitude": 3.0979584,
+      "longitude": 98.4894196
+    },
+    {
+      "nama": "RSUD Tarutung",
+      "kotakab": "Tapanuli Utara",
+      "Provinsi": "North Sumatera",
+      "telp": "(0633) 21303",
+      "latitude": 2.0268437,
+      "longitude": 98.9585211
+    },
+    {
+      "nama": "RSUD Dr Djasamen Saragih",
+      "kotakab": "Pematang Siantar",
+      "Provinsi": "North Sumatera",
+      "telp": "(0622) 22959",
+      "latitude": 2.9581872,
+      "longitude": 99.0675496
+    },
+    {
+      "nama": "RSUP dr M Djamil",
+      "kotakab": "Padang",
+      "Provinsi": "West Sumatra",
+      "telp": "(0751) 32371",
+      "latitude": -0.9434042,
+      "longitude": 100.3647657
+    },
+    {
+      "nama": "RSUD Dr Achmad Mochtar",
+      "kotakab": "Bukittinggi",
+      "Provinsi": "West Sumatra",
+      "telp": "(0752) 2172",
+      "latitude": -0.2997603,
+      "longitude": 100.3639549
+    },
+    {
+      "nama": "RSUD Arifin Achmad",
+      "kotakab": "Pekanbaru",
+      "Provinsi": "Riau",
+      "telp": "(0761) 23418",
+      "latitude": 0.5232355,
+      "longitude": 101.4496205
+    },
+    {
+      "nama": "RSUD Puri Husada",
+      "kotakab": "Tembilahan",
+      "Provinsi": "Riau",
+      "telp": "(0768) 24563",
+      "latitude": -0.322955,
+      "longitude": 103.1609693
+    },
+    {
+      "nama": "RSUD Kota Dumai",
+      "kotakab": "Dumai",
+      "Provinsi": "Riau",
+      "telp": "(0765) 440992",
+      "latitude": 1.6802749,
+      "longitude": 101.4573467
+    },
+    {
+      "nama": "RSUD Embung Fatimah Batu Aji",
+      "kotakab": "Batam",
+      "Provinsi": "Riau Islands",
+      "telp": "(0778) 364446",
+      "latitude": 1.0503794,
+      "longitude": 103.9654574
+    },
+    {
+      "nama": "RSBP Batam Sekupang",
+      "kotakab": "Batam",
+      "Provinsi": "Riau Islands",
+      "telp": "(0778) 322046",
+      "latitude": 1.1298782,
+      "longitude": 103.929359
+    },
+    {
+      "nama": "RSUD Provinsi Kepulauan Riau",
+      "kotakab": "Tanjungpinang",
+      "Provinsi": "Riau Islands",
+      "telp": "(0771) 7335203",
+      "latitude": 0.9238859,
+      "longitude": 104.4979215
+    },
+    {
+      "nama": "RSUD Muhammad Sani Tanjung Balai Karimun",
+      "kotakab": "Karimun",
+      "Provinsi": "Riau Islands",
+      "telp": "(0777) 327808",
+      "latitude": 1.0141689,
+      "longitude": 103.4116554
+    },
+    {
+      "nama": "RSUD Dr H Marsidi Judono Tanjungpandang",
+      "kotakab": "Belitung",
+      "Provinsi": "Bangka Belitung",
+      "telp": "(0719) 22190",
+      "latitude": -2.7489965,
+      "longitude": 107.6760705
+    },
+    {
+      "nama": "RSUD Depati Hamzah",
+      "kotakab": "Pangkal Pinang",
+      "Provinsi": "Bangka Belitung",
+      "telp": "(0717) 438660",
+      "latitude": -2.1446355,
+      "longitude": 106.1232703
+    },
+    {
+      "nama": "RSUP Dr Mohammad Hoesin",
+      "kotakab": "Palembang",
+      "Provinsi": "South Sumatera",
+      "telp": "(0711) 354088",
+      "latitude": -2.9661217,
+      "longitude": 104.7480364
+    },
+    {
+      "nama": "RS Dr Rivai Abdullah",
+      "kotakab": "Banyuasin",
+      "Provinsi": "South Sumatera",
+      "telp": "(0711) 7537201",
+      "latitude": -2.979655,
+      "longitude": 104.8612031
+    },
+    {
+      "nama": "RSUD Kayuagung",
+      "kotakab": "Ogan Komering Ilir",
+      "Provinsi": "South Sumatera",
+      "telp": "(0712) 323889",
+      "latitude": -3.4076066,
+      "longitude": 104.8234115
+    },
+    {
+      "nama": "RSUD Lahat",
+      "kotakab": "Lahat",
+      "Provinsi": "South Sumatera",
+      "telp": "(0731) 323080",
+      "latitude": -3.7927749,
+      "longitude": 103.5320318
+    },
+    {
+      "nama": "RSUD Siti Fatimah",
+      "kotakab": "Palembang",
+      "Provinsi": "South Sumatera",
+      "telp": "(0711) 5178883",
+      "latitude": -2.9491184,
+      "longitude": 104.732268
+    },
+    {
+      "nama": "RSUD Dr M Yunus",
+      "kotakab": "Bengkulu",
+      "Provinsi": "Bengkulu",
+      "telp": "(0736) 52004",
+      "latitude": -3.8343375,
+      "longitude": 102.3118814
+    },
+    {
+      "nama": "RSUD Hasanuddin Damrah Manna",
+      "kotakab": "Bengkulu Selatan",
+      "Provinsi": "Bengkulu",
+      "telp": "(62)85381637684",
+      "latitude": -4.442176,
+      "longitude": 102.8941292
+    },
+    {
+      "nama": "RSUD Arga Makmur",
+      "kotakab": "Bengkulu Utara",
+      "Provinsi": "Bengkulu",
+      "telp": "(0737) 521118",
+      "latitude": -3.4421887,
+      "longitude": 102.188916
+    },
+    {
+      "nama": "RSUD Raden Mattaher",
+      "kotakab": "Jambi",
+      "Provinsi": "Jambi",
+      "telp": "(0741) 61692",
+      "latitude": -1.6029185,
+      "longitude": 103.5780348
+    },
+    {
+      "nama": "RSUD Dr H Abdul Moeloek",
+      "kotakab": "Bandar Lampung",
+      "Provinsi": "Lampung",
+      "telp": "(0721) 703312",
+      "latitude": -5.4030677,
+      "longitude": 105.2564366
+    },
+    {
+      "nama": "RSUD Dr H Bob Bazar SKM",
+      "kotakab": "Lampung Selatan",
+      "Provinsi": "Lampung",
+      "telp": "(0727) 322159",
+      "latitude": -5.7275738,
+      "longitude": 105.594319
+    },
+    {
+      "nama": "RSD May Jend HM Ryacudu",
+      "kotakab": "Kotabumi",
+      "Provinsi": "Lampung",
+      "telp": "(0724) 22095",
+      "latitude": -4.8327137,
+      "longitude": 104.8892705
+    },
+    {
+      "nama": "RSUD Jend Ahmad Yani",
+      "kotakab": "Metro",
+      "Provinsi": "Lampung",
+      "telp": "(0725) 41820",
+      "latitude": -5.1157183,
+      "longitude": 105.3079348
+    },
+    {
+      "nama": "RSU Kabupaten Tangerang",
+      "kotakab": "Tangerang",
+      "Provinsi": "Banten",
+      "telp": "(021) 5523507",
+      "latitude": -6.169779,
+      "longitude": 106.6334226
+    },
+    {
+      "nama": "RSUD Dr Drajat Prawiranegara",
+      "kotakab": "Serang",
+      "Provinsi": "Banten",
+      "telp": "-",
+      "latitude": -6.1198962,
+      "longitude": 106.1504341
+    },
+    {
+      "nama": "RSUP Dr Hasan Sadikin",
+      "kotakab": "Bandung",
+      "Provinsi": "West Java",
+      "telp": "(022) 203495355",
+      "latitude": -6.8964508,
+      "longitude": 107.5966233
+    },
+    {
+      "nama": "RS Paru Dr H A Rotinsulu",
+      "kotakab": "Bandung",
+      "Provinsi": "West Java",
+      "telp": "(022) 3034446",
+      "latitude": -6.8788433,
+      "longitude": 107.6038509
+    },
+    {
+      "nama": "RS Paru Dr M Goenawan Partowidigdo",
+      "kotakab": "Bogor",
+      "Provinsi": "West Java",
+      "telp": "(0251) 8253630",
+      "latitude": -6.6877263,
+      "longitude": 106.936855
+    },
+    {
+      "nama": "RSUD R Syamsudin SH",
+      "kotakab": "Sukabumi",
+      "Provinsi": "West Java",
+      "telp": "(0266) 225180",
+      "latitude": -6.9167864,
+      "longitude": 106.9318561
+    },
+    {
+      "nama": "RSUD Kabupaten Indramayu",
+      "kotakab": "Indramayu",
+      "Provinsi": "West Java",
+      "telp": "(0234) 272655",
+      "latitude": -6.3295071,
+      "longitude": 108.3193693
+    },
+    {
+      "nama": "RSUD Dr Slamet Garut",
+      "kotakab": "Garut",
+      "Provinsi": "West Java",
+      "telp": "(0262) 232720",
+      "latitude": -7.2198133,
+      "longitude": 107.8948479
+    },
+    {
+      "nama": "RSD Gunung Jati",
+      "kotakab": "Cirebon",
+      "Provinsi": "West Java",
+      "telp": "(0231) 206330",
+      "latitude": -6.7317376,
+      "longitude": 108.55282
+    },
+    {
+      "nama": "RS TK II Dustira",
+      "kotakab": "Cimahi",
+      "Provinsi": "West Java",
+      "telp": "(022) 6652207",
+      "latitude": -6.8852876,
+      "longitude": 107.5324307
+    },
+    {
+      "nama": "RSUD Subang",
+      "kotakab": "Subang",
+      "Provinsi": "West Java",
+      "telp": "(0260) 417442",
+      "latitude": -6.8837601,
+      "longitude": 107.5325662
+    },
+    {
+      "nama": "RSPI Sulianti Saroso",
+      "kotakab": "Jakarta Utara",
+      "Provinsi": "Jakarta",
+      "telp": "(021) 6506559",
+      "latitude": -6.1300914,
+      "longitude": 106.8600953
+    },
+    {
+      "nama": "RSPAD Gatot Soebroto",
+      "kotakab": "Jakarta Pusat",
+      "Provinsi": "Jakarta",
+      "telp": "(021) 3440693",
+      "latitude": -6.176123,
+      "longitude": 106.8354542
+    },
+    {
+      "nama": "RSUD Cengkareng",
+      "kotakab": "Jakarta Barat",
+      "Provinsi": "Jakarta",
+      "telp": "(021) 54372874",
+      "latitude": -6.1427608,
+      "longitude": 106.7327165
+    },
+    {
+      "nama": "RSU Bhayangkara TK I R Said Sukanto (RS Polri)",
+      "kotakab": "Jakarta Timur",
+      "Provinsi": "Jakarta",
+      "telp": "(021) 8093288",
+      "latitude": -6.2695482,
+      "longitude": 106.8685198
+    },
+    {
+      "nama": "RSUP Persahabatan",
+      "kotakab": "Jakarta Timur",
+      "Provinsi": "Jakarta",
+      "telp": "(021) 4891708",
+      "latitude": -6.2028062,
+      "longitude": 106.8826348
+    },
+    {
+      "nama": "RSAL Mintoharjo",
+      "kotakab": "Jakarta Pusat",
+      "Provinsi": "Jakarta",
+      "telp": "(021) 5703081",
+      "latitude": -6.2109629,
+      "longitude": 106.8092384
+    },
+    {
+      "nama": "RSUD Pasar Minggu",
+      "kotakab": "Jakarta Selatan",
+      "Provinsi": "Jakarta",
+      "telp": "(021) 29059999",
+      "latitude": -6.2941923,
+      "longitude": 106.8177912
+    },
+    {
+      "nama": "RSUP Fatmawati",
+      "kotakab": "Jakarta Selatan",
+      "Provinsi": "Jakarta",
+      "telp": "(021) 7501524",
+      "latitude": -6.2948524,
+      "longitude": 106.7933516
+    },
+    {
+      "nama": "RSUP dr Kariadi",
+      "kotakab": "Semarang",
+      "Provinsi": "Central Java",
+      "telp": "(024) 8413476",
+      "latitude": -6.9942065,
+      "longitude": 110.405301
+    },
+    {
+      "nama": "RSUD KRMT Wongsonegoro",
+      "kotakab": "Semarang",
+      "Provinsi": "Central Java",
+      "telp": "(024) 6711500",
+      "latitude": -7.0339507,
+      "longitude": 110.4646003
+    },
+    {
+      "nama": "RSU Columbia Asia",
+      "kotakab": "Semarang",
+      "Provinsi": "Central Java",
+      "telp": "(024) 7629999",
+      "latitude": -6.9843027,
+      "longitude": 110.3807143
+    },
+    {
+      "nama": "RSU Sultan Agung",
+      "kotakab": "Semarang",
+      "Provinsi": "Central Java",
+      "telp": "(024) 6580019",
+      "latitude": -6.9554966,
+      "longitude": 110.4591457
+    },
+    {
+      "nama": "RSU St Elizabeth",
+      "kotakab": "Semarang",
+      "Provinsi": "Central Java",
+      "telp": "(024) 8310035",
+      "latitude": -7.0081206,
+      "longitude": 110.4171791
+    },
+    {
+      "nama": "RSU Telogorejo",
+      "kotakab": "Semarang",
+      "Provinsi": "Central Java",
+      "telp": "(024) 86466000",
+      "latitude": -6.9880217,
+      "longitude": 110.4242753
+    },
+    {
+      "nama": "RSU TK III Bhakti Wira Tamtama",
+      "kotakab": "Semarang",
+      "Provinsi": "Central Java",
+      "telp": "(024) 3555944",
+      "latitude": -6.986833,
+      "longitude": 110.4062431
+    },
+    {
+      "nama": "RSUD Tugurejo",
+      "kotakab": "Semarang",
+      "Provinsi": "Central Java",
+      "telp": "(024) 7605297",
+      "latitude": -6.9845604,
+      "longitude": 110.3537439
+    },
+    {
+      "nama": "RSUP dr Soeradji Tirtonegoro",
+      "kotakab": "Klaten",
+      "Provinsi": "Central Java",
+      "telp": "(0272) 321041",
+      "latitude": -7.7143799,
+      "longitude": 110.5864769
+    },
+    {
+      "nama": "RSUD Kraton Kabupaten",
+      "kotakab": "Pekalongan",
+      "Provinsi": "Central Java",
+      "telp": "(0285) 421621",
+      "latitude": -6.8814082,
+      "longitude": 109.6653463
+    },
+    {
+      "nama": "RSUD Dr H RM Soeselo Slawi",
+      "kotakab": "Tegal",
+      "Provinsi": "Central Java",
+      "telp": "(0283) 491016",
+      "latitude": -6.9935091,
+      "longitude": 109.1355191
+    },
+    {
+      "nama": "RSUD Dr H Soewondo",
+      "kotakab": "Kendal",
+      "Provinsi": "Central Java",
+      "telp": "(0294) 381433",
+      "latitude": -6.9178287,
+      "longitude": 110.2040305
+    },
+    {
+      "nama": "RSUD Prof Dr Margono Soekarjo",
+      "kotakab": "Banyumas",
+      "Provinsi": "Central Java",
+      "telp": "(0281) 632708",
+      "latitude": -7.4366567,
+      "longitude": 109.2652207
+    },
+    {
+      "nama": "RSUD Tidar Kota Magelang",
+      "kotakab": "Magelang",
+      "Provinsi": "Central Java",
+      "telp": "(0293) 362260",
+      "latitude": -7.48552,
+      "longitude": 110.2160598
+    },
+    {
+      "nama": "RSUD Dr Moewardi",
+      "kotakab": "Surakarta",
+      "Provinsi": "Central Java",
+      "telp": "(0271) 634634",
+      "latitude": -7.5581697,
+      "longitude": 110.8394868
+    },
+    {
+      "nama": "RS Paru Dr Ario Wirawan",
+      "kotakab": "Salatiga",
+      "Provinsi": "Central Java",
+      "telp": "(0298) 326130",
+      "latitude": -7.3489354,
+      "longitude": 110.4872623
+    },
+    {
+      "nama": "RSUD Banyumas",
+      "kotakab": "Banyumas",
+      "Provinsi": "Central Java",
+      "telp": "(0281) 796182",
+      "latitude": -7.5291494,
+      "longitude": 109.2905
+    },
+    {
+      "nama": "RSUD Dr Loekmonohadi",
+      "kotakab": "Kudus",
+      "Provinsi": "Central Java",
+      "telp": "(0291) 431831",
+      "latitude": -6.8189314,
+      "longitude": 110.8344213
+    },
+    {
+      "nama": "RSUD Kardinah",
+      "kotakab": "Tegal",
+      "Provinsi": "Central Java",
+      "telp": "(0283) 350377",
+      "latitude": -6.8847748,
+      "longitude": 109.1332419
+    },
+    {
+      "nama": "RSUD Salatiga",
+      "kotakab": "Salatiga",
+      "Provinsi": "Central Java",
+      "telp": "(0298) 324074",
+      "latitude": -7.3266562,
+      "longitude": 110.4932865
+    },
+    {
+      "nama": "RSUD Ambarawa",
+      "kotakab": "Ambarawa",
+      "Provinsi": "Central Java",
+      "telp": "(0298) 591020",
+      "latitude": -7.2677979,
+      "longitude": 110.4060831
+    },
+    {
+      "nama": "RSUD Sunan Kalijaga",
+      "kotakab": "Demak",
+      "Provinsi": "Central Java",
+      "telp": "(0291) 685018",
+      "latitude": -6.8989466,
+      "longitude": 110.6317094
+    },
+    {
+      "nama": "RSUD dr R Soedjati",
+      "kotakab": "Grobogan",
+      "Provinsi": "Central Java",
+      "telp": "(0292) 421004",
+      "latitude": -7.0847476,
+      "longitude": 110.9179776
+    },
+    {
+      "nama": "RSU Bhayangkara",
+      "kotakab": "Semarang",
+      "Provinsi": "Central Java",
+      "telp": "(024) 6720675",
+      "latitude": -7.0002602,
+      "longitude": 110.4440566
+    },
+    {
+      "nama": "RSUD RAA Soewondo",
+      "kotakab": "Pati",
+      "Provinsi": "Central Java",
+      "telp": "(0295) 381102",
+      "latitude": -6.7387037,
+      "longitude": 111.0410043
+    },
+    {
+      "nama": "RSUD RA Kartini",
+      "kotakab": "Jepara",
+      "Provinsi": "Central Java",
+      "telp": "(0291) 591175",
+      "latitude": -6.6062537,
+      "longitude": 110.6794054
+    },
+    {
+      "nama": "RSUD dr R Soetrasno",
+      "kotakab": "Rembang",
+      "Provinsi": "Central Java",
+      "telp": "(0295) 691444",
+      "latitude": -6.7089339,
+      "longitude": 111.356008
+    },
+    {
+      "nama": "RSUD dr R Soetijono",
+      "kotakab": "Blora",
+      "Provinsi": "Central Java",
+      "telp": "(0296) 531118",
+      "latitude": -6.9671116,
+      "longitude": 111.4182324
+    },
+    {
+      "nama": "RSU Mardi Rahayu",
+      "kotakab": "Kudus",
+      "Provinsi": "Central Java",
+      "telp": "(0291) 438234",
+      "latitude": -6.830099,
+      "longitude": 110.8290833
+    },
+    {
+      "nama": "RSUD Bendan",
+      "kotakab": "Pekalongan",
+      "Provinsi": "Central Java",
+      "telp": "(0285) 437222",
+      "latitude": -6.8915427,
+      "longitude": 109.6592803
+    },
+    {
+      "nama": "RSUD Kajen",
+      "kotakab": "Pekalongan",
+      "Provinsi": "Central Java",
+      "telp": "(0285) 385231",
+      "latitude": -7.0310299,
+      "longitude": 109.6151839
+    },
+    {
+      "nama": "RSUD Batang",
+      "kotakab": "Batang",
+      "Provinsi": "Central Java",
+      "telp": "(0285) 4493034",
+      "latitude": -6.914604,
+      "longitude": 109.7164554
+    },
+    {
+      "nama": "RSUD Dr M Ashari",
+      "kotakab": "Pemalang",
+      "Provinsi": "Central Java",
+      "telp": "(0284) 321614",
+      "latitude": -6.9106352,
+      "longitude": 109.3801396
+    },
+    {
+      "nama": "RSUD Brebes",
+      "kotakab": "Brebes",
+      "Provinsi": "Central Java",
+      "telp": "(0283) 671431",
+      "latitude": -6.874948,
+      "longitude": 109.0471762
+    },
+    {
+      "nama": "RSU Islam Harapan Anda",
+      "kotakab": "Tegal",
+      "Provinsi": "Central Java",
+      "telp": "(0283) 358244",
+      "latitude": -6.8763809,
+      "longitude": 109.1262465
+    },
+    {
+      "nama": "RSUD Cilacap",
+      "kotakab": "Cilacap",
+      "Provinsi": "Central Java",
+      "telp": "(0282) 533010",
+      "latitude": -7.7172811,
+      "longitude": 109.0131146
+    },
+    {
+      "nama": "RSUD Hj Anna Lasmanah",
+      "kotakab": "Banjarnegara",
+      "Provinsi": "Central Java",
+      "telp": "(0286) 591464",
+      "latitude": -7.3928861,
+      "longitude": 109.6906363
+    },
+    {
+      "nama": "RSUD dr R Goeteng Taroenadibrata",
+      "kotakab": "Purbalingga",
+      "Provinsi": "Central Java",
+      "telp": "(0281) 891016",
+      "latitude": -7.3785884,
+      "longitude": 109.3593854
+    },
+    {
+      "nama": "RSUD KRT Setjonegoro",
+      "kotakab": "Wonosobo",
+      "Provinsi": "Central Java",
+      "telp": "(0286) 321091",
+      "latitude": -7.3635745,
+      "longitude": 109.8963548
+    },
+    {
+      "nama": "RSUD Ir Soekarno",
+      "kotakab": "Sukoharjo",
+      "Provinsi": "Central Java",
+      "telp": "(0271) 593118",
+      "latitude": -7.6834072,
+      "longitude": 110.8477229
+    },
+    {
+      "nama": "RSUD Pandan Arang",
+      "kotakab": "Boyolali",
+      "Provinsi": "Central Java",
+      "telp": "(0276) 321065",
+      "latitude": -7.5329466,
+      "longitude": 110.5885355
+    },
+    {
+      "nama": "RSU PKU Muhammadiyah",
+      "kotakab": "Surakarta",
+      "Provinsi": "Central Java",
+      "telp": "(0271) 714578",
+      "latitude": -7.5650218,
+      "longitude": 110.8145044
+    },
+    {
+      "nama": "RSUD Dr Tjitrowardojo",
+      "kotakab": "Purworejo",
+      "Provinsi": "Central Java",
+      "telp": "(0275) 321118",
+      "latitude": -7.7188828,
+      "longitude": 109.987194
+    },
+    {
+      "nama": "RSUP dr Sardjito",
+      "kotakab": "Sleman",
+      "Provinsi": "Yogyakarta",
+      "telp": "(0274) 631190",
+      "latitude": -7.768611,
+      "longitude": 110.3712855
+    },
+    {
+      "nama": "RSUD Panembahan Senopati",
+      "kotakab": "Bantul",
+      "Provinsi": "Yogyakarta",
+      "telp": "(0274) 367381",
+      "latitude": -7.8928224,
+      "longitude": 110.3359187
+    },
+    {
+      "nama": "RSUD Wates",
+      "kotakab": "Kulon Progo",
+      "Provinsi": "Yogyakarta",
+      "telp": "(0274) 773169",
+      "latitude": -7.8588287,
+      "longitude": 110.1457591
+    },
+    {
+      "nama": "RSUD Dr Soebandi",
+      "kotakab": "Jember",
+      "Provinsi": "East Java",
+      "telp": "(0331) 487441",
+      "latitude": -8.1519089,
+      "longitude": 113.7128345
+    },
+    {
+      "nama": "RSUD Kabupaten Kediri",
+      "kotakab": "Kediri",
+      "Provinsi": "East Java",
+      "telp": "(0354) 391718",
+      "latitude": -7.7597672,
+      "longitude": 112.1738997
+    },
+    {
+      "nama": "RSUD Dr Soetomo",
+      "kotakab": "Surabaya",
+      "Provinsi": "East Java",
+      "telp": "(031) 5501001",
+      "latitude": -7.2680171,
+      "longitude": 112.7563105
+    },
+    {
+      "nama": "RSUD Dr Soedono",
+      "kotakab": "Madiun",
+      "Provinsi": "East Java",
+      "telp": "(0351) 464325",
+      "latitude": -7.626303,
+      "longitude": 111.5218121
+    },
+    {
+      "nama": "RSUD Dr Saiful Anwar",
+      "kotakab": "Malang",
+      "Provinsi": "East Java",
+      "telp": "(0341) 362101",
+      "latitude": -7.972562,
+      "longitude": 112.6293569
+    },
+    {
+      "nama": "RSUD dr R Koesma",
+      "kotakab": "Tuban",
+      "Provinsi": "East Java",
+      "telp": "(0356) 321010",
+      "latitude": -6.8987586,
+      "longitude": 112.0443305
+    },
+    {
+      "nama": "RSUD Blambangan",
+      "kotakab": "Banyuwangi",
+      "Provinsi": "East Java",
+      "telp": "(0333) 421118",
+      "latitude": -8.2083601,
+      "longitude": 114.363804
+    },
+    {
+      "nama": "RSUD Dr R Sosodoro Djatikoesoemo",
+      "kotakab": "Bojonegoro",
+      "Provinsi": "East Java",
+      "telp": "(0353) 3412133",
+      "latitude": -7.1595249,
+      "longitude": 111.8974411
+    },
+    {
+      "nama": "RSUD Dr Iskak",
+      "kotakab": "Tulungagung",
+      "Provinsi": "East Java",
+      "telp": "(0355) 322609",
+      "latitude": -8.0549297,
+      "longitude": 111.9159231
+    },
+    {
+      "nama": "RSUD Sidoarjo",
+      "kotakab": "Sidoarjo",
+      "Provinsi": "East Java",
+      "telp": "(031) 8961649",
+      "latitude": -7.4654393,
+      "longitude": 112.7141822
+    },
+    {
+      "nama": "RS Universitas Airlangga",
+      "kotakab": "Surabaya",
+      "Provinsi": "East Java",
+      "telp": "(031) 5916290",
+      "latitude": -7.2700689,
+      "longitude": 112.7827615
+    },
+    {
+      "nama": "RSUD Tanjung Selor",
+      "kotakab": "Bulungan",
+      "Provinsi": "North Kalimantan",
+      "telp": "(0552) 21118",
+      "latitude": 2.8304625,
+      "longitude": 117.3788725
+    },
+    {
+      "nama": "RSUD Tarakan",
+      "kotakab": "Tarakan",
+      "Provinsi": "North Kalimantan",
+      "telp": "(0551) 21166",
+      "latitude": 3.3181552,
+      "longitude": 117.6028893
+    },
+    {
+      "nama": "RSUD Dr Doris Sylvanus",
+      "kotakab": "Palangkaraya",
+      "Provinsi": "Central Kalimantan",
+      "telp": "(0536) 3224695",
+      "latitude": -2.2107712,
+      "longitude": 113.9207976
+    },
+    {
+      "nama": "RSUD Dr Murjani",
+      "kotakab": "Sampit",
+      "Provinsi": "Central Kalimantan",
+      "telp": "(0531) 21010",
+      "latitude": -2.5427704,
+      "longitude": 112.9468547
+    },
+    {
+      "nama": "RSUD Sultan Imanuddin",
+      "kotakab": "Kotawaringin Barat",
+      "Provinsi": "Central Kalimantan",
+      "telp": "(0532) 21404",
+      "latitude": -2.6918916,
+      "longitude": 111.6302008
+    },
+    {
+      "nama": "RSUD Ulin Banjarmasin",
+      "kotakab": "Banjarmasin",
+      "Provinsi": "South Kalimantan",
+      "telp": "(0511) 3252180",
+      "latitude": -3.3228357,
+      "longitude": 114.5989962
+    },
+    {
+      "nama": "RSUD H Boejasin Pelaihari",
+      "kotakab": "Tanah Laut",
+      "Provinsi": "South Kalimantan",
+      "telp": "(0512) 21083",
+      "latitude": -3.7994206,
+      "longitude": 114.7757893
+    },
+    {
+      "nama": "RSUD Abdul Wahab Sjahranie",
+      "kotakab": "Samarinda",
+      "Provinsi": "East Kalimantan",
+      "telp": "(0541) 738118",
+      "latitude": -0.4790047,
+      "longitude": 117.1420767
+    },
+    {
+      "nama": "RSUD Dr Kanujoso Djatiwibowo",
+      "kotakab": "Balikpapan",
+      "Provinsi": "East Kalimantan",
+      "telp": "(0542) 873901",
+      "latitude": -1.225499,
+      "longitude": 116.8659788
+    },
+    {
+      "nama": "RSUD Panglima Sebaya",
+      "kotakab": "Paser",
+      "Provinsi": "East Kalimantan",
+      "telp": "(0543) 24563",
+      "latitude": -2.1888558,
+      "longitude": 116.398275
+    },
+    {
+      "nama": "RSU Taman Husada",
+      "kotakab": "Bontang",
+      "Provinsi": "East Kalimantan",
+      "telp": "(0548) 22111",
+      "latitude": 0.142618,
+      "longitude": 117.4456208
+    },
+    {
+      "nama": "RSUD Aji Muhammad Parikesit Tenggarong",
+      "kotakab": "Kutai Kertanegara",
+      "Provinsi": "East Kalimantan",
+      "telp": "(0541) 661015",
+      "latitude": -0.4390119,
+      "longitude": 117.010755
+    },
+    {
+      "nama": "RSUD Dr Soedarso",
+      "kotakab": "Pontianak",
+      "Provinsi": "West Kalimantan",
+      "telp": "(0561) 737701",
+      "latitude": -0.0615716,
+      "longitude": 109.3624383
+    },
+    {
+      "nama": "RSUD Dr Abdul Azis",
+      "kotakab": "Singkawang",
+      "Provinsi": "West Kalimantan",
+      "telp": "(0562) 631798",
+      "latitude": 0.8954038,
+      "longitude": 108.9704965
+    },
+    {
+      "nama": "RSUD Ade Mohammad Djoen",
+      "kotakab": "Sintang",
+      "Provinsi": "West Kalimantan",
+      "telp": "(0565) 21002",
+      "latitude": 0.0784959,
+      "longitude": 111.4938313
+    },
+    {
+      "nama": "RSUD Dr Agoesdjam",
+      "kotakab": "Ketapang",
+      "Provinsi": "West Kalimantan",
+      "telp": "(0534) 3037239",
+      "latitude": -1.8327195,
+      "longitude": 109.9652872
+    },
+    {
+      "nama": "RSUD Prof Dr H Aloei Saboe",
+      "kotakab": "Gorontalo",
+      "Provinsi": "Gorontalo",
+      "telp": "(62)8124315555",
+      "latitude": 0.5560345,
+      "longitude": 123.0816118
+    },
+    {
+      "nama": "RSUD Undata Palu",
+      "kotakab": "Palu",
+      "Provinsi": "Central Sulawesi",
+      "telp": "(0451) 4908020",
+      "latitude": -0.8578386,
+      "longitude": 119.881858
+    },
+    {
+      "nama": "RSUD Kabupaten Banggai Luwuk",
+      "kotakab": "Luwuk",
+      "Provinsi": "Central Sulawesi",
+      "telp": "(0461) 21820",
+      "latitude": -0.9387166,
+      "longitude": 122.8007692
+    },
+    {
+      "nama": "RSU Mokopido Toli-Toli",
+      "kotakab": "Toli-Toli",
+      "Provinsi": "Central Sulawesi",
+      "telp": "(0453) 21301",
+      "latitude": 1.0358848,
+      "longitude": 120.8205882
+    },
+    {
+      "nama": "RSUD Kolonedale",
+      "kotakab": "Kolonedale",
+      "Provinsi": "Central Sulawesi",
+      "telp": "(0465) 21010",
+      "latitude": -1.972432,
+      "longitude": 121.3346718
+    },
+    {
+      "nama": "RSU Anutapura Palu",
+      "kotakab": "Palu",
+      "Provinsi": "Central Sulawesi",
+      "telp": "(0451) 460570",
+      "latitude": -0.9000607,
+      "longitude": 119.8469916
+    },
+    {
+      "nama": "RSUP Prof Dr R D Kandou",
+      "kotakab": "Manado",
+      "Provinsi": "North Sulawesi",
+      "telp": "(0431) 8383058",
+      "latitude": 1.4535364,
+      "longitude": 124.8059889
+    },
+    {
+      "nama": "RSUD Kota Kotamobagu",
+      "kotakab": "Kotamobagu",
+      "Provinsi": "North Sulawesi",
+      "telp": "(0434) 822816",
+      "latitude": 0.7081921,
+      "longitude": 124.3050919
+    },
+    {
+      "nama": "RSU Ratatotok",
+      "kotakab": "Minahasa Tenggara",
+      "Provinsi": "North Sulawesi",
+      "telp": "(0431) 3177610",
+      "latitude": 0.8694034,
+      "longitude": 124.6975245
+    },
+    {
+      "nama": "RSUD Dr Sam Ratulangi",
+      "kotakab": "Minahasa",
+      "Provinsi": "North Sulawesi",
+      "telp": "(0431) 321171",
+      "latitude": 1.3095684,
+      "longitude": 124.9143731
+    },
+    {
+      "nama": "RSUD Provinsi Sulawesi Barat",
+      "kotakab": "Mamuju",
+      "Provinsi": "West Sulawesi",
+      "telp": "(0426) 2703260",
+      "latitude": -2.6899675,
+      "longitude": 118.8605664
+    },
+    {
+      "nama": "RSUP dr Wahidin Sudirohusodo",
+      "kotakab": "Makassar",
+      "Provinsi": "South Sulawesi",
+      "telp": "(0411) 584677",
+      "latitude": -5.1347427,
+      "longitude": 119.4910085
+    },
+    {
+      "nama": "RS Dr Tadjuddin Chalid",
+      "kotakab": "Makassar",
+      "Provinsi": "South Sulawesi",
+      "telp": "(0411) 512902",
+      "latitude": -5.1112125,
+      "longitude": 119.5147383
+    },
+    {
+      "nama": "RSUD Labuang Baji",
+      "kotakab": "Makassar",
+      "Provinsi": "South Sulawesi",
+      "telp": "(0411) 872120",
+      "latitude": -5.1625704,
+      "longitude": 119.4160676
+    },
+    {
+      "nama": "RS Tk II Pelamonia",
+      "kotakab": "Makassar",
+      "Provinsi": "South Sulawesi",
+      "telp": "(0411) 7402332",
+      "latitude": -5.1381599,
+      "longitude": 119.4126774
+    },
+    {
+      "nama": "RSU Lakipadada Toraja",
+      "kotakab": "Tana Toraja",
+      "Provinsi": "South Sulawesi",
+      "telp": "(0423) 22264",
+      "latitude": -3.0734258,
+      "longitude": 119.8655478
+    },
+    {
+      "nama": "RSU Andi Makkasau Parepare",
+      "kotakab": "Parepare",
+      "Provinsi": "South Sulawesi",
+      "telp": "(0421) 21823",
+      "latitude": -4.0352886,
+      "longitude": 119.6316933
+    },
+    {
+      "nama": "RSUP Sanglah",
+      "kotakab": "Denpasar",
+      "Provinsi": "Bali",
+      "telp": "(0361) 227911-15",
+      "latitude": -8.6757835,
+      "longitude": 115.2109824
+    },
+    {
+      "nama": "RSUD Sanjiwani",
+      "kotakab": "Gianyar",
+      "Provinsi": "Bali",
+      "telp": "(0361) 943049",
+      "latitude": -8.5372573,
+      "longitude": 115.3203536
+    },
+    {
+      "nama": "RSU Tabanan",
+      "kotakab": "Tabanan",
+      "Provinsi": "Bali",
+      "telp": "(0361) 811027",
+      "latitude": -8.5391479,
+      "longitude": 115.1300213
+    },
+    {
+      "nama": "RSUD Kabupaten Buleleng",
+      "kotakab": "Singaraja",
+      "Provinsi": "Bali",
+      "telp": "(0362) 22046",
+      "latitude": -8.119802,
+      "longitude": 115.0902894
+    },
+    {
+      "nama": "RSUD Provinsi NTB",
+      "kotakab": "Bima",
+      "Provinsi": "West Nusa Tenggara",
+      "telp": "(0370) 7502424",
+      "latitude": -8.6074062,
+      "longitude": 116.130854
+    },
+    {
+      "nama": "RSU Bima",
+      "kotakab": "Bima",
+      "Provinsi": "West Nusa Tenggara",
+      "telp": "(0374) 43142",
+      "latitude": -8.4736182,
+      "longitude": 118.7596103
+    },
+    {
+      "nama": "RS H.L. Manambai Abdulkadir",
+      "kotakab": "Sumbawa Besar",
+      "Provinsi": "West Nusa Tenggara",
+      "telp": "(0371) 2628078",
+      "latitude": -8.5315783,
+      "longitude": 117.4455123
+    },
+    {
+      "nama": "RSUD Dr R Soedjono Selong",
+      "kotakab": "Lombok Timur",
+      "Provinsi": "West Nusa Tenggara",
+      "telp": "01-123 2234567",
+      "latitude": -8.6506132,
+      "longitude": 116.5261823
+    },
+    {
+      "nama": "RSU Prof. Dr. WZ Johanes",
+      "kotakab": "Kupang",
+      "Provinsi": "East Nusa Tenggara",
+      "telp": "(0380) 833614",
+      "latitude": -10.1683118,
+      "longitude": 123.5835438
+    },
+    {
+      "nama": "RSUD Dr TC Hillers",
+      "kotakab": "Sikka",
+      "Provinsi": "East Nusa Tenggara",
+      "telp": "(62)81261153944",
+      "latitude": -8.6223804,
+      "longitude": 122.2020435
+    },
+    {
+      "nama": "RSUD Komodo Labuan Bajo",
+      "kotakab": "Manggarai Barat",
+      "Provinsi": "East Nusa Tenggara",
+      "telp": "(62)81337055250",
+      "latitude": -8.5412543,
+      "longitude": 119.8940731
+    },
+    {
+      "nama": "RSU Dr M. Haulussy",
+      "kotakab": "Ambon",
+      "Provinsi": "Maluku",
+      "telp": "(0911) 344871",
+      "latitude": -3.7085186,
+      "longitude": 128.1633375
+    },
+    {
+      "nama": "RSUP dr J. Leimena",
+      "kotakab": "Ambon",
+      "Provinsi": "Maluku",
+      "telp": " - ",
+      "latitude": -3.6613802,
+      "longitude": 128.1843506
+    },
+    {
+      "nama": "RSUD Dr P P Magretti Saumlaki",
+      "kotakab": "Tanimbar Selatan",
+      "Provinsi": "Maluku",
+      "telp": "(0918) 21113",
+      "latitude": -5.8053428,
+      "longitude": 127.5000315
+    },
+    {
+      "nama": "RSUD Dr H Chasan Boesoirie",
+      "kotakab": "Ternate",
+      "Provinsi": "North Maluku",
+      "telp": "(0921) 3121281",
+      "latitude": 0.7820785,
+      "longitude": 127.3735873
+    },
+    {
+      "nama": "RSUD Jayapura",
+      "kotakab": "Jayapura",
+      "Provinsi": "Papua",
+      "telp": "(0967) 533616",
+      "latitude": -2.534945,
+      "longitude": 140.7082262
+    },
+    {
+      "nama": "RSUD Merauke",
+      "kotakab": "Merauke",
+      "Provinsi": "Papua",
+      "telp": "(0971) 32112",
+      "latitude": -8.4817861,
+      "longitude": 140.3865955
+    },
+    {
+      "nama": "RSUD Nabire",
+      "kotakab": "Nabire",
+      "Provinsi": "Papua",
+      "telp": "(0984) 21845",
+      "latitude": -3.3424558,
+      "longitude": 135.5273993
+    },
+    {
+      "nama": "RSUD Manokwari",
+      "kotakab": "Manokwari",
+      "Provinsi": "West Papua",
+      "telp": "(0986) 211440",
+      "latitude": -0.8686136,
+      "longitude": 134.0758113
+    },
+    {
+      "nama": "RSUD Kabupaten Sorong",
+      "kotakab": "Sorong",
+      "Provinsi": "West Papua",
+      "telp": "(0951) 321850",
+      "latitude": -0.8695863,
+      "longitude": 131.2446338
+    }
+  ]
+}
