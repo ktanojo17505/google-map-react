@@ -15,6 +15,7 @@ import mapStyles from "./mapStyles";
 // import Button from "react-bootstrap/Button";
 import * as config from "./config";
 import * as HospitalData from "./data/all.json";
+import { getCovidData } from "./fetchCovidData";
 // import * as publicHospitalData from "./data/rumahsakitumum.json";
 // import * as privateHospitalData from "./data/rumahsakitkhusus.json";
 // import * as publicHealthCenterData from "./data/puskesmas.json";
@@ -25,14 +26,22 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     var HospitalLocations = [];
+    var clickHospital = [];
     var position;
+    var hospitalName;
+    var id;
     for (let index = 0; index < HospitalData.hospitals.length; ++index) {
+      id = index;
       var latitude = HospitalData.hospitals[index].latitude;
       var longitude = HospitalData.hospitals[index].longitude;
       position = { latitude, longitude };
-      HospitalLocations.push(position);
+      hospitalName = HospitalData.hospitals[index].nama;
+      var entry = { id, position, hospitalName };
+      HospitalLocations.push(entry);
+      clickHospital.push(false);
     }
     this.state.Hospitals = HospitalLocations;
+    this.state.didClickHospital = clickHospital;
   }
   state = {
     address: "",
@@ -50,7 +59,8 @@ class App extends React.Component {
       lng: 0
     },
     placeHospitals: false,
-    Hospitals: []
+    Hospitals: [],
+    didClickHospital: []
   };
 
   componentDidMount() {
@@ -204,13 +214,23 @@ class App extends React.Component {
     var doPlaceHospitals = this.state.placeHospitals;
     doPlaceHospitals = !doPlaceHospitals;
     this.setState({ placeHospitals: doPlaceHospitals });
-    console.log(this.state.placeLocations);
   };
+
+  // clickHospital = id => {
+  //   console.log("clicked");
+  // var tempClickHospital = this.state.didClickHospital;
+  // console.log(tempClickHospital[index]);
+  // tempClickHospital[index] = !tempClickHospital[index];
+  // console.log(tempClickHospital[index]);
+  // this.setState({ didClickHospital: tempClickHospital });
+  // console.log(this.state.didClickHospital);
+  // };
 
   render() {
     const options = {
       styles: mapStyles
     };
+    getCovidData();
     const MapWithAMarker = withScriptjs(
       withGoogleMap(props => (
         <div>
@@ -240,10 +260,18 @@ class App extends React.Component {
                 <Marker
                   draggable={false}
                   position={{
-                    lat: hospitalLoc.latitude,
-                    lng: hospitalLoc.longitude
+                    lat: hospitalLoc.position.latitude,
+                    lng: hospitalLoc.position.longitude
                   }}
-                />
+                  key={hospitalLoc.id}
+                  // onClick={this.clickHospital(hospitalLoc.id)}
+                >
+                  {/* {this.state.didClickHospital[index] && (
+                    <InfoWindow>
+                      <div>{hospitalLoc.name}</div>
+                    </InfoWindow>
+                  )} */}
+                </Marker>
               ))}
             <AutoComplete
               style={{
@@ -257,6 +285,7 @@ class App extends React.Component {
               onPlaceSelected={this.onPlaceSelected}
             />
           </GoogleMap>
+          <fetchCovidData></fetchCovidData>
         </div>
       ))
     );
