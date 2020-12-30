@@ -15,7 +15,7 @@ import mapStyles from "./mapStyles";
 // import Button from "react-bootstrap/Button";
 import * as config from "./config";
 import * as HospitalData from "./data/all.json";
-import { getCovidData } from "./fetchCovidData";
+import { getProvinceCovidData, getIndonesiaCovidData } from "./fetchCovidData";
 // import * as publicHospitalData from "./data/rumahsakitumum.json";
 // import * as privateHospitalData from "./data/rumahsakitkhusus.json";
 // import * as publicHealthCenterData from "./data/puskesmas.json";
@@ -198,39 +198,18 @@ class App extends React.Component {
     });
   };
 
-  // placeMarker = event => {
-  // console.log(event);
-  // const lat = event.latLng.lat();
-  // const lng = event.latLng.lng();
-  // const position = { lat, lng };
-  // const newMarker = { position };
-  // this.setState({
-  //   markers: [...this.state.markers, newMarker]
-  // });
-  // console.log(this.state.markers);
-  // };
-
   placeHospitals = () => {
     var doPlaceHospitals = this.state.placeHospitals;
     doPlaceHospitals = !doPlaceHospitals;
     this.setState({ placeHospitals: doPlaceHospitals });
   };
 
-  // clickHospital = id => {
-  //   console.log("clicked");
-  // var tempClickHospital = this.state.didClickHospital;
-  // console.log(tempClickHospital[index]);
-  // tempClickHospital[index] = !tempClickHospital[index];
-  // console.log(tempClickHospital[index]);
-  // this.setState({ didClickHospital: tempClickHospital });
-  // console.log(this.state.didClickHospital);
-  // };
-
   render() {
     const options = {
       styles: mapStyles
     };
-    getCovidData();
+    getProvinceCovidData();
+    getIndonesiaCovidData();
     const MapWithAMarker = withScriptjs(
       withGoogleMap(props => (
         <div>
@@ -285,7 +264,6 @@ class App extends React.Component {
               onPlaceSelected={this.onPlaceSelected}
             />
           </GoogleMap>
-          <fetchCovidData></fetchCovidData>
         </div>
       ))
     );
