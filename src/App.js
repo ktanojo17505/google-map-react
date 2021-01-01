@@ -15,7 +15,9 @@ import mapStyles from "./mapStyles";
 // import Button from "react-bootstrap/Button";
 import * as config from "./config";
 import * as HospitalData from "./data/all.json";
-import { getProvinceCovidData, getIndonesiaCovidData } from "./fetchCovidData";
+// import CovidGeoMap from "./CovidGeoMap";
+import { getProvinceCovidData } from "./fetchCovidData";
+import CovidGeoMap from "./CovidGeoMap";
 // import * as publicHospitalData from "./data/rumahsakitumum.json";
 // import * as privateHospitalData from "./data/rumahsakitkhusus.json";
 // import * as publicHealthCenterData from "./data/puskesmas.json";
@@ -61,9 +63,14 @@ class App extends React.Component {
     placeHospitals: false,
     Hospitals: [],
     didClickHospital: []
+    // provinceCovidData: []
   };
 
-  componentDidMount() {
+  async componentDidMount() {
+    // const data = await getIndonesiaCovidData();
+    // const fetchedData = await getProvinceCovidData();
+    // this.setState({ provinceCovidData: fetchedData });
+    // console.log(data);
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(position => {
         this.setState(
@@ -147,7 +154,6 @@ class App extends React.Component {
   };
 
   onMarkerDragEnd = event => {
-    console.log(event);
     let newLat = event.latLng.lat();
     let newLng = event.latLng.lng();
     Geocode.fromLatLng(newLat, newLng).then(response => {
@@ -208,8 +214,8 @@ class App extends React.Component {
     const options = {
       styles: mapStyles
     };
-    getProvinceCovidData();
-    getIndonesiaCovidData();
+    // getProvinceCovidData();
+    // getIndonesiaCovidData();
     const MapWithAMarker = withScriptjs(
       withGoogleMap(props => (
         <div>
@@ -267,7 +273,8 @@ class App extends React.Component {
         </div>
       ))
     );
-
+    // const { provinceCovidData } = this.state;
+    // console.log(provinceCovidData);
     return (
       <div style={{ padding: "1rem", margin: "0 auto", maxWidth: 1000 }}>
         <h1>Google Maps Basic</h1>
@@ -294,6 +301,8 @@ class App extends React.Component {
         <div style={{ marginTop: "2.5rem" }}>
           <Button onClick={this.placeHospitals}>Hospitals</Button>
         </div>
+        <CovidGeoMap />
+        {/* <CovidGeoMap data={provinceCovidData} /> */}
       </div>
     );
   }
