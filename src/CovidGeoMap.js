@@ -1,10 +1,9 @@
-import { getProvinceCovidData, getIndonesiaCovidData } from "./fetchCovidData";
+import { getProvinceCovidData } from "./fetchCovidData";
 import React, { useState, useEffect } from "react";
 import Chart from "react-google-charts";
 import * as config from "./config";
 
 const CovidGeoMap = () => {
-  // console.log(props.data);
   const [provinceData, setProvinceData] = useState([]);
 
   useEffect(() => {
@@ -14,8 +13,6 @@ const CovidGeoMap = () => {
 
     fetchData();
   }, []);
-
-  // console.log(getProvinceCovidData());
 
   const geoMap = (
     <Chart

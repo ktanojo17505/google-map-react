@@ -16,11 +16,9 @@ import mapStyles from "./mapStyles";
 import * as config from "./config";
 import * as HospitalData from "./data/all.json";
 // import CovidGeoMap from "./CovidGeoMap";
-import { getProvinceCovidData } from "./fetchCovidData";
+// import { getProvinceCovidData } from "./fetchCovidData";
 import CovidGeoMap from "./CovidGeoMap";
-// import * as publicHospitalData from "./data/rumahsakitumum.json";
-// import * as privateHospitalData from "./data/rumahsakitkhusus.json";
-// import * as publicHealthCenterData from "./data/puskesmas.json";
+// import CovidLineGraph from "./CovidLineGraph";
 
 Geocode.setApiKey(config.GOOGLE_API_KEY);
 
@@ -63,7 +61,6 @@ class App extends React.Component {
     placeHospitals: false,
     Hospitals: [],
     didClickHospital: []
-    // provinceCovidData: []
   };
 
   async componentDidMount() {
@@ -302,6 +299,7 @@ class App extends React.Component {
           <Button onClick={this.placeHospitals}>Hospitals</Button>
         </div>
         <CovidGeoMap />
+        {/* <CovidLineGraph /> */}
         {/* <CovidGeoMap data={provinceCovidData} /> */}
       </div>
     );
