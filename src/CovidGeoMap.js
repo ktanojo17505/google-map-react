@@ -12,6 +12,8 @@ const CovidGeoMap = () => {
     };
 
     fetchData();
+
+    // console.log(provinceData);
   }, []);
 
   const geoMap = (

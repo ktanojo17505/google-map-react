@@ -19,6 +19,7 @@ import * as HospitalData from "./data/all.json";
 // import { getProvinceCovidData } from "./fetchCovidData";
 import CovidGeoMap from "./CovidGeoMap";
 import CovidLineGraph from "./CovidLineGraph";
+import ProvinceGraph from "./ProvinceCovidGraph";
 
 Geocode.setApiKey(config.GOOGLE_API_KEY);
 
@@ -300,6 +301,7 @@ class App extends React.Component {
         </div>
         <CovidGeoMap />
         <CovidLineGraph />
+        <ProvinceGraph />
         {/* <CovidGeoMap data={provinceCovidData} /> */}
       </div>
     );
