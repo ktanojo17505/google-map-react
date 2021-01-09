@@ -31,7 +31,7 @@ export const getProvinceCovidData = async () => {
 export const getDailyProvinceData = async () => {
   try {
     const {
-      data: { list_data, last_date }
+      data: { list_data }
     } = await axios.get(proxy + url + "/prov.json");
     const arr = list_data.map(entry => ({
       name: entry.key,
@@ -47,7 +47,7 @@ export const getDailyProvinceData = async () => {
       new_recovered: entry.penambahan.sembuh,
       new_deaths: entry.penambahan.meninggal
     }));
-    return { last_date, arr };
+    return arr;
   } catch (error) {
     console.log(error);
   }
