@@ -30,7 +30,7 @@ const CovidGeoMap = () => {
     />
   );
 
-  return <div>{geoMap}</div>;
+  return <div style={{ margin: "0 auto", maxWidth: 1000 }}>{geoMap}</div>;
 };
 
 export default CovidGeoMap;

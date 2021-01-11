@@ -90,7 +90,7 @@ const ProvinceGraph = () => {
   );
 
   return (
-    <div>
+    <div style={{ padding: "1rem", margin: "0 auto", maxWidth: 1000 }}>
       <div>{pickProvince}</div>
       <div>{provinceGraphs}</div>
     </div>

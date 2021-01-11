@@ -20,6 +20,7 @@
     "react-google-charts": "^3.0.15",
     "react-google-maps": "^9.4.5",
     "react-scripts": "4.0.1",
+    "recompose": "^0.30.0",
     "web-vitals": "^0.2.4",
     "xhr": "^2.6.0"
   },

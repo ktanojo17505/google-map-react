@@ -9,7 +9,6 @@ const CovidLineGraph = () => {
     const fetchDailyAPI = async () => {
       setDailyData(await getDailyCovidData());
     };
-
     fetchDailyAPI();
   }, []);
 
@@ -79,7 +78,7 @@ const CovidLineGraph = () => {
     />
   );
   return (
-    <div>
+    <div style={{ margin: "0 auto", maxWidth: 1000 }}>
       <h1>Cummulative Data</h1>
       <div>{totallineChart}</div>
       <h1>Daily Data</h1>
