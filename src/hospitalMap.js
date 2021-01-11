@@ -14,8 +14,13 @@ import AutoComplete from "react-google-autocomplete";
 import mapStyles from "./mapStyles";
 import * as config from "./config";
 import * as HospitalData from "./data/all.json";
+import axios from "axios";
+// import express from "express";
 
 Geocode.setApiKey(config.GOOGLE_API_KEY);
+const proxy = "https://cors-anywhere.herokuapp.com/";
+
+// const app = express();
 
 class HospitalMap extends React.Component {
   constructor(props) {
@@ -204,6 +209,32 @@ class HospitalMap extends React.Component {
     console.log(this.state.hospitalId);
   };
 
+  fetchRoute = async destination => {
+    console.log(destination);
+    console.log(this.state.mapPosition);
+    try {
+      const {
+        data: { routes }
+      } = await axios.get(
+        proxy +
+          `https://maps.googleapis.com/maps/api/directions/json?origin=${this.state.mapPosition.lat},${this.state.mapPosition.lng}&destination=${destination.position.latitude},${destination.position.longitude}&key=${config.GOOGLE_API_KEY}`
+      );
+      const total_dist = routes[0].legs[0].distance.text;
+      const total_time = routes[0].legs[0].duration.text;
+      const steps_length = routes[0].legs[0].steps.length;
+      const path = [];
+      routes[0].legs[0].steps.map(entry => {
+        // console.log(entry);
+        path.push(entry.start_location);
+      });
+      path.push(routes[0].legs[0].steps[steps_length - 1].end_location);
+      const route_info = { total_dist, total_time, path };
+      console.log(route_info);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   render() {
     const options = {
       styles: mapStyles
@@ -244,14 +275,15 @@ class HospitalMap extends React.Component {
                   onClick={() => this.selectHospital(hospitalLoc.id)}
                   key={hospitalLoc.id}
                 >
-                  {this.state.hospitalId === index && (
-                    <InfoWindow>
-                      <div>
-                        <div>{hospitalLoc.name}</div>
-                        <div>{hospitalLoc.phoneNumber}</div>
-                      </div>
-                    </InfoWindow>
-                  )}
+                  {this.state.hospitalId === index &&
+                    this.fetchRoute(hospitalLoc) && (
+                      <InfoWindow>
+                        <div>
+                          <div>{hospitalLoc.name}</div>
+                          <div>{hospitalLoc.phoneNumber}</div>
+                        </div>
+                      </InfoWindow>
+                    )}
                 </Marker>
               ))}
             <AutoComplete
