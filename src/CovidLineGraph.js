@@ -4,7 +4,6 @@ import { Line } from "react-chartjs-2";
 
 const CovidLineGraph = () => {
   const [dailyData, setDailyData] = useState([]);
-
   useEffect(() => {
     const fetchDailyAPI = async () => {
       setDailyData(await getDailyCovidData());

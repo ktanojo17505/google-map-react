@@ -9,9 +9,9 @@ class App extends React.Component {
     return (
       <div>
         <HospitalMap />
-        {/* <CovidGeoMap />
+        <CovidGeoMap />
         <CovidLineGraph />
-        <ProvinceGraph /> */}
+        <ProvinceGraph />
         {/* <CovidGeoMap data={provinceCovidData} /> */}
       </div>
     );

@@ -6,7 +6,9 @@ import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
-  Marker
+  Marker,
+  PolyLine,
+  DirectionsRenderer
 } from "react-google-maps";
 import Geocode from "react-geocode";
 import { Button, Descriptions } from "antd";
@@ -21,6 +23,7 @@ Geocode.setApiKey(config.GOOGLE_API_KEY);
 const proxy = "https://cors-anywhere.herokuapp.com/";
 
 // const app = express();
+const google = window.google;
 
 class HospitalMap extends React.Component {
   constructor(props) {
@@ -61,7 +64,8 @@ class HospitalMap extends React.Component {
     },
     placeHospitals: false,
     Hospitals: [],
-    hospitalId: -1
+    hospitalId: -1,
+    hospitalPath: null
   };
 
   async componentDidMount() {
@@ -228,11 +232,38 @@ class HospitalMap extends React.Component {
         path.push(entry.start_location);
       });
       path.push(routes[0].legs[0].steps[steps_length - 1].end_location);
+      console.log(path);
       const route_info = { total_dist, total_time, path };
-      console.log(route_info);
+      this.setState({ hospitalPath: route_info });
+      // return route_info;
     } catch (error) {
       console.log(error);
     }
+    // const directionsService = new google.maps.DirectionsService();
+
+    // const origin = this.state.mapPosition;
+    // console.log(origin);
+    // console.log(destination.position);
+    // directionsService.route(
+    //   {
+    //     origin: origin,
+    //     destination: {
+    //       lat: destination.position.latitude,
+    //       lng: destination.position.longitude
+    //     },
+    //     travelMode: google.maps.TravelMode.DRIVING
+    //   },
+    //   (result, status) => {
+    //     if (status === google.maps.DirectionsStatus.OK) {
+    //       console.log(result);
+    //       this.setState({
+    //         hospitalPath: result
+    //       });
+    //     } else {
+    //       console.log(`error fetching directions ${result}`);
+    //     }
+    //   }
+    // );
   };
 
   render() {
@@ -277,15 +308,20 @@ class HospitalMap extends React.Component {
                 >
                   {this.state.hospitalId === index &&
                     this.fetchRoute(hospitalLoc) && (
-                      <InfoWindow>
-                        <div>
-                          <div>{hospitalLoc.name}</div>
-                          <div>{hospitalLoc.phoneNumber}</div>
-                        </div>
-                      </InfoWindow>
+                      <div>
+                        <InfoWindow>
+                          <div>
+                            <div>{hospitalLoc.name}</div>
+                            <div>{hospitalLoc.phoneNumber}</div>
+                          </div>
+                        </InfoWindow>
+                      </div>
                     )}
                 </Marker>
               ))}
+            {/* {this.state.hospitalPath && (
+              <DirectionsRenderer direction={this.state.hospitalPath} />
+            )} */}
             <AutoComplete
               style={{
                 width: "100%",
