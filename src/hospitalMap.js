@@ -208,9 +208,11 @@ class HospitalMap extends React.Component {
     this.setState({ placeHospitals: doPlaceHospitals });
   };
 
-  selectHospital = index => {
-    this.setState({ hospitalId: index });
+  selectHospital = location => {
+    this.setState({ hospitalId: location.id });
+    this.fetchRoute(location);
     console.log(this.state.hospitalId);
+    console.log(this.state.hospitalPath);
   };
 
   fetchRoute = async destination => {
@@ -303,20 +305,19 @@ class HospitalMap extends React.Component {
                     lat: hospitalLoc.position.latitude,
                     lng: hospitalLoc.position.longitude
                   }}
-                  onClick={() => this.selectHospital(hospitalLoc.id)}
+                  onClick={() => this.selectHospital(hospitalLoc)}
                   key={hospitalLoc.id}
                 >
-                  {this.state.hospitalId === index &&
-                    this.fetchRoute(hospitalLoc) && (
-                      <div>
-                        <InfoWindow>
-                          <div>
-                            <div>{hospitalLoc.name}</div>
-                            <div>{hospitalLoc.phoneNumber}</div>
-                          </div>
-                        </InfoWindow>
-                      </div>
-                    )}
+                  {this.state.hospitalId === index && (
+                    <div>
+                      <InfoWindow>
+                        <div>
+                          <div>{hospitalLoc.name}</div>
+                          <div>{hospitalLoc.phoneNumber}</div>
+                        </div>
+                      </InfoWindow>
+                    </div>
+                  )}
                 </Marker>
               ))}
             {/* {this.state.hospitalPath && (
