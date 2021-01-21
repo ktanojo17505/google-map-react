@@ -208,16 +208,45 @@ class HospitalMap extends React.Component {
     this.setState({ placeHospitals: doPlaceHospitals });
   };
 
-  selectHospital = location => {
+  selectHospital = async location => {
+    // console.log(destination);
+    // console.log(this.state.mapPosition);
     this.setState({ hospitalId: location.id });
-    this.fetchRoute(location);
+
+    const directionsService = new google.maps.DirectionsService();
+
+    const origin = this.state.mapPosition;
+
+    directionsService.route(
+      {
+        origin: origin,
+        destination: {
+          lat: location.position.latitude,
+          lng: location.position.longitude
+        },
+        travelMode: google.maps.TravelMode.DRIVING
+      },
+      (result, status) => {
+        if (status === google.maps.DirectionsStatus.OK) {
+          console.log(result);
+          this.setState({
+            hospitalPath: result
+          });
+        } else {
+          console.log(`error fetching directions ${result}`);
+        }
+      }
+    );
     console.log(this.state.hospitalId);
     console.log(this.state.hospitalPath);
+    // this.fetchRoute(location);
+    // console.log(this.state.hospitalId);
+    // console.log(this.state.hospitalPath);
   };
 
   fetchRoute = async destination => {
-    console.log(destination);
-    console.log(this.state.mapPosition);
+    // console.log(destination);
+    // console.log(this.state.mapPosition);
     try {
       const {
         data: { routes }
@@ -225,18 +254,18 @@ class HospitalMap extends React.Component {
         proxy +
           `https://maps.googleapis.com/maps/api/directions/json?origin=${this.state.mapPosition.lat},${this.state.mapPosition.lng}&destination=${destination.position.latitude},${destination.position.longitude}&key=${config.GOOGLE_API_KEY}`
       );
-      const total_dist = routes[0].legs[0].distance.text;
-      const total_time = routes[0].legs[0].duration.text;
-      const steps_length = routes[0].legs[0].steps.length;
+      // const total_dist = routes[0].legs[0].distance.text;
+      // const total_time = routes[0].legs[0].duration.text;
+      // const steps_length = routes[0].legs[0].steps.length;
       const path = [];
       routes[0].legs[0].steps.map(entry => {
         // console.log(entry);
         path.push(entry.start_location);
       });
-      path.push(routes[0].legs[0].steps[steps_length - 1].end_location);
+      // path.push(routes[0].legs[0].steps[steps_length - 1].end_location);
       console.log(path);
-      const route_info = { total_dist, total_time, path };
-      this.setState({ hospitalPath: route_info });
+      // const route_info = { total_dist, total_time, path };
+      this.setState({ hospitalPath: path });
       // return route_info;
     } catch (error) {
       console.log(error);
@@ -320,9 +349,9 @@ class HospitalMap extends React.Component {
                   )}
                 </Marker>
               ))}
-            {/* {this.state.hospitalPath && (
-              <DirectionsRenderer direction={this.state.hospitalPath} />
-            )} */}
+            {this.state.hospitalPath && (
+              <DirectionsRenderer directions={this.state.hospitalPath} />
+            )}
             <AutoComplete
               style={{
                 width: "100%",
